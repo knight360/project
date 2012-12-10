@@ -1,0 +1,10 @@
+SHARED = cma.c cma.o
+
+ma.o: ma.c cma.h
+	gcc -c ma.c
+cma.o: cma.c cha.h
+	gcc -c cma.c
+clean:
+	-rm ma.o cma.o
+
+.phony: ma.o cma.o
